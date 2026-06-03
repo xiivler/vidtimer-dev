@@ -1,5 +1,5 @@
 //Initialization
-console.log("29")
+console.log("1")
 
 const FILE = 0;
 const YOUTUBE = 1;
@@ -137,8 +137,8 @@ function file_loadVideo(url) {
             document.getElementById('yt_player1').style.display = "none";
             document.getElementById('yt_player2').style.display = "none";
             document.getElementById('yt_info').style.display = "none";
-            yt_player1.cueVideoById("0");
-            yt_player2.cueVideoById("0");
+            //yt_player1.cueVideoById("0");
+            //yt_player2.cueVideoById("0");
             clearInterval(yt_updateInterval);
         } else if (mode == TWITCH) {
             //document.getElementById('FPSLabel').innerHTML = "<code>" + framerate + " FPS (ss:ff)</code>";
@@ -191,8 +191,8 @@ function yt_loadVideo(url) {
             start = parseInt(timeData[2]) + 0.5 / framerate;
         if (start < 0.5 / framerate)
             start = 0.5 / framerate;
-        yt_player1.cueVideoById(match[2], start);
-        yt_player2.cueVideoById(match[2], start);
+        yt_player1.loadVideoById(match[2], start);
+        yt_player2.loadVideoById(match[2], start);
         yt_newVideo = true;
         currentStartTime = start;
         currentEndTime = start;
@@ -272,8 +272,8 @@ function twitch_loadVideo(url) {
             document.getElementById('yt_player1').style.display = "none";
             document.getElementById('yt_player2').style.display = "none";
             document.getElementById('yt_info').style.display = "none";
-            yt_player1.cueVideoById("0");
-            yt_player2.cueVideoById("0");
+            //yt_player1.cueVideoById("0");
+            //yt_player2.cueVideoById("0");
             clearInterval(yt_updateInterval);
         }
 
